@@ -5,7 +5,7 @@
 @section('content')
     <div class="card text-middle">
         <div class="card-body">
-        <h1 class="card-title text-center">HABIE STIR JAYA</h1>
+        <h1 class="card-title text-center">PET SHOP</h1>
         <div class="row text-center">
             <div class="col-sm">
                 <img src="{{ asset('/img/Honda-Car.png') }}" id="left-car">
