@@ -16,6 +16,7 @@ class CreatePaketPerawatansTable extends Migration
         Schema::create('paket_perawatans', function (Blueprint $table) {
             $table->id();
             $table->string("nama_paket");
+            $table->string("deskripsi_paket");
             $table->double("harga_paket");
             $table->timestamps();
         });
