@@ -1,10 +1,14 @@
 <div class="main-sidebar">
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
-            <a href="index.html">Habie Stir Jaya</a>
+            <a href="/">
+                <img src="{{ asset('img/logo_dark.png') }}" height="30">
+            </a>
         </div>
         <div class="sidebar-brand sidebar-brand-sm">
-            <a href="index.html">HSJ!</a>
+            <a href="/">
+                <img src="{{ asset('img/emblem_dark.png') }}" height="20">
+            </a>
         </div>
         <ul class="sidebar-menu">
             <li class="menu-header">Master</li>

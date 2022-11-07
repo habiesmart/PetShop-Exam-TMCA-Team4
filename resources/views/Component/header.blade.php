@@ -9,7 +9,9 @@
 
     <container class="mx-auto container-fluid">
       <div class="mx-auto">
+        <a href="/">
         <img src="{{ asset('/img/logo.png') }}" height="35">
+        </a>
       </div>
     </container>
 
