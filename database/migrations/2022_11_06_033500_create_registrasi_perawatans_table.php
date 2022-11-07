@@ -18,6 +18,7 @@ class CreateRegistrasiPerawatansTable extends Migration
             $table->unsignedBigInteger('pet_id');
             $table->foreign('pet_id')->references('id')->on('pets');
             $table->unsignedBigInteger('paket_perawatan_id');
+            $table->string('nama_pemesan');
             $table->foreign('paket_perawatan_id')->references('id')->on('paket_perawatans');
             $table->timestamp('book_at')->useCurrent();
             $table->timestamps();
