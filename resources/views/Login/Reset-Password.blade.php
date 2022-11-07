@@ -23,9 +23,10 @@
 
 <body style="overflow-x: hidden;">
     <section class="section">
-        <div class="section-header">
-            <h1>Tugas Oleh Muhammad Nurul Habie Budiman | <i>NIM: 2301955402</i> &nbsp;</h1>
-            <em>Kunjungi website saya: <a href="https://habiesmart.com">Habiesmart.com</a></em>
+        <div class="section-header bg-primary">
+            <div class="mx-auto">
+                <img src="{{ asset('/img/logo.png') }}" height="35">
+            </div>
         </div>
         <div class="section-body">
             <div class="row">
@@ -91,7 +92,7 @@
                                                 {{-- <a href="" class="text-danger" style="text-decoration: underline">Forgot Password</a> --}}
                                             </div>
                                             <div class="col-6">
-                                                <button type="submit" class="form-control" onclick="this.form.submit();">Reset Password</button>
+                                                <button type="submit" class="form-control btn-outline-danger" onclick="this.form.submit();">Reset Password</button>
                                             </div>
                                         </div>
                                     </div>
@@ -104,7 +105,7 @@
                                         <div class="col-12">
                                             <hr style="margin: 0">
                                             <p class="text-dark">Already have Account?</p>
-                                            <a href="{{route('Login')}}"><button type="button" class="btn btn-dark form-control">Login</button></a>
+                                            <a href="{{route('Login')}}"><button type="button" class="btn btn-outline-primary form-control">Login</button></a>
                                         </div>
                                     </div>
                                 </div>

@@ -98,7 +98,7 @@
                                         <div class="col-12">
                                             <hr style="margin: 0">
                                             <p class="text-dark">Dont have Account?</p>
-                                            <a href="{{route('register')}}"><button type="button" class="btn btn-dark form-control">Register</button></a>
+                                            <a href="{{route('register')}}"><button type="button" class="btn btn-outline-primary form-control">Register</button></a>
                                         </div>
                                     </div>
                                 </div>
