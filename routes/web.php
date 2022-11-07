@@ -1,7 +1,9 @@
 <?php
 
-use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\PaketPerawatanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,15 +24,6 @@ Route::get('/order', function () {
     return view('Order.order');
 })->name('order')->middleware('auth');
 
-Route::get('/jadwal-belajar', function () {
-    return view('Jadwal.jadwal-belajar');
-})->name('jadwal-belajar')->middleware('auth');
-
-Route::get('/paket-jasa', function () {
-    return view('Paket.paket-jasa');
-})->name('paket-jasa')->middleware('auth');
-
-
 Route::get('/register', [LoginController::class, 'Register'])->name('register');
 Route::post('/registration', [LoginController::class, 'registration'])->name('registration');
 
@@ -45,3 +38,6 @@ Route::get('/checking-counter', [LoginController::class, 'CheckingCounter']);
 Route::get('/Reset-Password', [LoginController::class, 'ResetPassword'])->name('Reset-Password');
 Route::post('/Resetting-Password', [LoginController::class, 'ResettingPassword'])->name('Resetting-Password');
 Route::post('/checking-existing-user', [LoginController::class, 'CheckingExistingUser'])->name('checking-existing-user');
+
+Route::get('/order-list', [OrderController::class, 'index'])->name('order-list')->middleware('auth');
+Route::get('/paket-perawatan', [PaketPerawatanController::class, 'index'])->name('paket-perawatan')->middleware('auth');
