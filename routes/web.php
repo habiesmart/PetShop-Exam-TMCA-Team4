@@ -18,6 +18,10 @@ Route::get('/', function () {
     return view('Dashboard.index');
 })->name('home')->middleware('auth');
 
+Route::get('/order', function () {
+    return view('Order.order');
+})->name('order')->middleware('auth');
+
 Route::get('/jadwal-belajar', function () {
     return view('Jadwal.jadwal-belajar');
 })->name('jadwal-belajar')->middleware('auth');
