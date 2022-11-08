@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\PaketPerawatanController;
+use App\Http\Controllers\PetController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,10 +44,12 @@ Route::get('/order-list', [OrderController::class, 'index'])->name('order-list')
 Route::get('/paket-perawatan', [PaketPerawatanController::class, 'index'])->name('paket-perawatan')->middleware('auth');
 
 //------------------- Pet Route
-Route::get('/pet', function () {
-    return view('Pet.index');
-})->name('pet')->middleware('auth');
+Route::get('/pet', [PetController::class, 'Index'])->name('pet')->middleware('auth');
+Route::post('/list-pet', [PetController::class, 'ListPet'])->name('list-pet')->middleware('auth');
 
 Route::get('/pet-register', function () {
-    return view('Pet.register');
+    return view('Pet.addPet');
 })->name('pet-register')->middleware('auth');
+
+Route::post('/pet-save', [PetController::class, 'Save'])->name('pet-save')->middleware('auth');
+Route::get('/pet-delete/{id}', [PetController::class, 'Delete'])->name('pet-delete')->middleware('auth');
