@@ -45,3 +45,13 @@ Route::get('/checking-counter', [LoginController::class, 'CheckingCounter']);
 Route::get('/Reset-Password', [LoginController::class, 'ResetPassword'])->name('Reset-Password');
 Route::post('/Resetting-Password', [LoginController::class, 'ResettingPassword'])->name('Resetting-Password');
 Route::post('/checking-existing-user', [LoginController::class, 'CheckingExistingUser'])->name('checking-existing-user');
+
+
+//------------------- Pet Route
+Route::get('/pet', function () {
+    return view('Pet.index');
+})->name('pet')->middleware('auth');
+
+Route::get('/pet-register', function () {
+    return view('Pet.register');
+})->name('pet-register')->middleware('auth');

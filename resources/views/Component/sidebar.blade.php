@@ -15,6 +15,7 @@
             <li class="nav-item dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Master</span></a>
                 <ul class="dropdown-menu">
+                    <li><a class="nav-link" asp-area="" asp-controller="Pet" asp-action="Index" href="{{ route('pet') }}">Hewan Kesayangan Anda</a></li>
                     <li><a class="nav-link" asp-area="" asp-controller="Jadwal" asp-action="Index" href="{{ route('jadwal-belajar') }}">Jadwal Belajar</a></li>
                     <li><a class="nav-link" asp-area="" asp-controller="Paket" asp-action="Index" href="{{ route('paket-jasa')}}" >Paket Jasa</a></li>
                     <li><a class="nav-link" asp-area="" asp-controller="Paket" asp-action="Index" href="{{ route('home')}}#trainer" >Trainer Kami</a></li>
