@@ -41,3 +41,12 @@ Route::post('/checking-existing-user', [LoginController::class, 'CheckingExistin
 
 Route::get('/order-list', [OrderController::class, 'index'])->name('order-list')->middleware('auth');
 Route::get('/paket-perawatan', [PaketPerawatanController::class, 'index'])->name('paket-perawatan')->middleware('auth');
+
+//------------------- Pet Route
+Route::get('/pet', function () {
+    return view('Pet.index');
+})->name('pet')->middleware('auth');
+
+Route::get('/pet-register', function () {
+    return view('Pet.register');
+})->name('pet-register')->middleware('auth');
