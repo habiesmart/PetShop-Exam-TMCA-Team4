@@ -53,3 +53,6 @@ Route::get('/pet-register', function () {
 
 Route::post('/pet-save', [PetController::class, 'Save'])->name('pet-save')->middleware('auth');
 Route::get('/pet-delete/{id}', [PetController::class, 'Delete'])->name('pet-delete')->middleware('auth');
+
+Route::post('/order-save', [OrderController::class, 'Save'])->name('order-save')->middleware('auth');
+Route::get('/order-delete/{id}', [OrderController::class, 'Delete'])->name('order-delete')->middleware('auth');

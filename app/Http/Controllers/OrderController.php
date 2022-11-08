@@ -15,4 +15,18 @@ class OrderController extends Controller
             "orders" => $orders
         ]);
     }
+
+    public function Save(Request $request)
+    {
+        $orders = [
+            "name" => $request->input('name'),
+            "pets_name" => $request->input('pets_name'),
+            "jenis_hewan" => $request->input('pet_id'),
+            "paket_perawatan" => $request->input('paket_perawatan_id'),
+            "book_at" => $request->input('book_at'),
+        ];
+        
+        RegistrasiPerawatans::create($orders);
+        return redirect()->to('orders');
+    }
 }
