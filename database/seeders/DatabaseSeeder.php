@@ -16,5 +16,6 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
         // \Database\Seeders\UserSeeder::run();
         (new UserSeeder())->run();
+        (new PetSeeder())->run();
     }
 }
