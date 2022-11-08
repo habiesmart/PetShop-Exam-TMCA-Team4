@@ -16,7 +16,7 @@
         <p class="card-text h5">Rawat peliharaan kesayangan anda dengan pelayanan kami yang mudah dan cepat! kami memiliki fasilitas klinik hewan terbaik dan terlengkap di Asia dengan dokter hewan bersertifikasi internasional.</p>
 
         <a href="{{route('order')}}"><button type="button" class="btn btn-primary btn-lg mt-4 mr-4">Pesan Sekarang</button></a>
-        <button type="button" class="btn btn-outline-light btn-lg mt-4">Lihat Pesanan Saya</button>
+        <a href="{{route('order-list')}}"><button type="button" class="btn btn-outline-light btn-lg mt-4">Lihat Pesanan Saya</button></a>
     </div>
     
 </container>
