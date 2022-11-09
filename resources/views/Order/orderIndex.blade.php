@@ -19,12 +19,12 @@
                         </thead>
                         <tbody>
                             @foreach ($orders as $order)
-                                {{-- <tr>
-                                    <td scope="row"> {{ $order->pets->name }}</td>
-                                    <td>{{ $order->pets->jenis_hewan }}</td>
-                                    <td>{{ $order->paket_perawatans->nama_paket }}</td>
-                                    <td>date("Y-m-d", {{ $order->book_at }})</td>
-                                </tr> --}}
+                                <tr>
+                                    <td scope="row"> {{ $order->pet->name }}</td>
+                                    <td>{{ $order->pet->jenis_hewan }}</td>
+                                    <td>{{ $order->paket_perawatan->nama_paket }}</td>
+                                    <td>{{ $order->book_at }}</td>
+                                </tr>
                             @endforeach
                         </tbody>
                 </table>
