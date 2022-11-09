@@ -17,5 +17,6 @@ class DatabaseSeeder extends Seeder
         // \Database\Seeders\UserSeeder::run();
         (new UserSeeder())->run();
         (new PetSeeder())->run();
+        (new PaketPerawatanSeeder())->run();
     }
 }
