@@ -24,6 +24,15 @@ class PetController extends Controller
         return response()->json($data);
     }
 
+    public function DetailPet($id = null)
+    {
+        if($id != null){
+            $pet = Pet::find($id);
+            return view('Pet.addPet', ["data" => $pet]);    
+        }
+        return view('Pet.addPet');
+    }
+    
     public function GetPet($id)
     {
         $pets = Pet::Where('id', '==');
