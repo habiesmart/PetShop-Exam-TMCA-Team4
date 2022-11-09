@@ -20,7 +20,7 @@
                         <tbody>
                             @foreach ($orders as $order)
                                 <tr>
-                                    <td scope="row">{{ $order->pets->name }}</td>
+                                    <td scope="row"> {{ $order->registrasi_perawatans->nama_pemesan }}</td>
                                     <td>{{ $order->pets->jenis_hewan }}</td>
                                     <td>{{ $order->paket_perawatans->nama_paket }}</td>
                                     <td>date("Y-m-d", {{ $order->book_at }})</td>

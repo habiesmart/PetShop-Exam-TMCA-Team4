@@ -18,14 +18,14 @@
         @csrf
         <div class="card-body form-group">
             <label class="form-label">Nama Pemesan</label>
-            <input type="text" class="form-control mb-4" id="name" name="name">
+            <input type="text" class="form-control mb-4" id="nama_pemesan" name="nama_pemesan">
             
             <label class="form-label">Nama Peliharaan</label>
             <input type="text" class="form-control mb-4" id="pets_name" name="pets_name">
 
             <div class="form-group">
               <label for="jenis_hewan">Jenis Hewan</label>
-              <select class="form-control" id="jenis_hewan" name="jenis_hewan">
+              <select class="form-control" id="pet_id" name="pet_id">
                 <option value="">Pilih Jenis Hewan</option>
                 <option value="1">Anjing</option>
                 <option value="2">Kucing</option>
@@ -34,7 +34,7 @@
             </div>
             <div class="form-group">
               <label for="jenis_hewan">Paket Perawatan</label>
-              <select class="form-control" id="paket_perawatan" name="paket_perawatan">
+              <select class="form-control" id="paket_perawatan_id" name="paket_perawatan_id">
                 <option value="">Pilih Paket Perawatan</option>
                 <option value="1">Dry Grooming</option>
                 <option value="2">Basic Grooming</option>
@@ -60,10 +60,10 @@
     $(document).ready(function(){
         $("#dtPet").DataTable({
             columns: [
-                { data: 'name' },
+                { data: 'nama_pemesan' },
                 { data: 'pets_name' },
-                { data: 'jenis_hewan' },
-                { data: 'paket_perawatan' },
+                { data: 'pet_id' },
+                { data: 'paket_perawatan_id' },
                 { data: 'book_at' },
                 { data: '',
                 render: (data,type,row) => {
