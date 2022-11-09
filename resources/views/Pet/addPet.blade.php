@@ -5,7 +5,7 @@
 @section('content')
 <div class="card text-bg-dark text-middle">
     <div class="card-head mt-4 mb-1">
-        <h1 class="card-title text-center text-primary">Daftar Peliharaan Kesayangan Anda </h1>
+        <h1 class="card-title text-center text-primary">{{!empty($data) ? 'Info': 'Daftar' }} Peliharaan Kesayangan Anda </h1>
     </div>
 </div>
 
@@ -51,17 +51,6 @@
 <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
 <script>
     $(document).ready(function(){
-        $("#dtPet").DataTable({
-            columns: [
-                { data: 'name' },
-                { data: 'age' },
-                { data: 'jenis_hewan' },
-                { data: '',
-                render: (data,type,row) => {
-                   return `<a href='' class="text-warning"><i class="fa fa-pencil-alt" aria-hidden="true"></i> Edit</a>`;
-                 }}
-            ]
-        });
     });
 </script>
 @endsection

@@ -12,7 +12,7 @@
 <container class="card text-bg-dark">
     <img class="card-img-top" src="" alt="">
       <div class="card-body">
-        <h4 class="card-title"><a href="{{route('pet-register')}}" class="btn btn-success float-right">Daftarkan</a></h4>
+        <h4 class="card-title"><a href="{{route('pet-detail')}}" class="btn btn-success float-right">Daftarkan</a></h4>
         <p class="card-text"></p>
         <table id="dtPet" class="display" style="width:100%">
             <thead>
@@ -72,7 +72,7 @@
                     { data: 'jenis_hewan' },
                         { data: '',
                         render: (data,type,row) => {
-                        return `<a href='' class="text-warning"><i class="fa fa-pencil-alt" aria-hidden="true"></i> Edit</a> | 
+                        return `<a href='/pet-detail/${row.id}' class="text-warning"><i class="fa fa-pencil-alt" aria-hidden="true"></i> Edit</a> | 
                         <a href='/pet-delete/${row.id}' class="text-danger"><i class="fas fa-trash-alt"></i> Delete</a>`;
                         }
                     }
