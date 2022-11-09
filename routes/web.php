@@ -47,9 +47,7 @@ Route::get('/paket-perawatan', [PaketPerawatanController::class, 'index'])->name
 Route::get('/pet', [PetController::class, 'Index'])->name('pet')->middleware('auth');
 Route::post('/list-pet', [PetController::class, 'ListPet'])->name('list-pet')->middleware('auth');
 
-Route::get('/pet-register', function () {
-    return view('Pet.addPet');
-})->name('pet-register')->middleware('auth');
+Route::get('/pet-detail/{id?}', [PetController::class, 'DetailPet'])->name('pet-detail')->middleware('auth');
 
 Route::post('/pet-save', [PetController::class, 'Save'])->name('pet-save')->middleware('auth');
 Route::get('/pet-delete/{id}', [PetController::class, 'Delete'])->name('pet-delete')->middleware('auth');
